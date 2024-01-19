@@ -7,7 +7,11 @@ const app = express();
 
 app.get('/', (request, response) => {
     response.send("Hello");
-})
+});
+
+app.get('/json', (request, response) => {
+    response.json({"name": "Ali"});
+});
 
 
 const PORT = process.env.PORT || 5000;
